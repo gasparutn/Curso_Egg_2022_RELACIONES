@@ -1,40 +1,41 @@
-
 package entidades;
 
+import Servicios.servis;
+
 public class RevolverAgua {
-    
-    private Integer posicact;
-    private Integer posicagua;
+
+    private int posicactual;
+    private int positambor;
 
     public RevolverAgua() {
+        posicactual = servis.llenaaleatorios(1, 6);
+        positambor = servis.llenaaleatorios(1, 6);
     }
 
-    public RevolverAgua(Integer posicact, Integer posicagua) {
-        this.posicact = posicact;
-        this.posicagua = posicagua;
+    public boolean mojar() {
+        boolean blanco = false;
+        if (posicactual == positambor) {
+
+            blanco = true;
+        }
+        siguientechorro();
+
+        return blanco;
     }
 
-    public Integer getPosicact() {
-        return posicact;
-    }
+    public void siguientechorro() {
+        if (posicactual == 6) {
+            posicactual = 1;
 
-    public void setPosicact(Integer posicact) {
-        this.posicact = posicact;
-    }
+        } else {
+            posicactual++;
+        }
 
-    public Integer getPosicagua() {
-        return posicagua;
-    }
-
-    public void setPosicagua(Integer posicagua) {
-        this.posicagua = posicagua;
     }
 
     @Override
     public String toString() {
-        return "RevolverAgua{" + "posicact=" + posicact + ", posicagua=" + posicagua + '}';
+        return "RevolverAgua{" + "posicactual= " + posicactual + ", positambor= " + positambor + '}';
     }
-    
-    
-    
+
 }

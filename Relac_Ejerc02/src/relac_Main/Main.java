@@ -1,22 +1,18 @@
-
 package relac_Main;
 
-import Servicios.servis;
-import java.util.Scanner;
-
+import entidades.Juego;
 
 public class Main {
 
-    
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in).useDelimiter("\n");
-      servis metagua = new servis();
-      
-      metagua.llenarRevolver();
-        
-        
-        
+        Juego jugar = new Juego(3);
+
+        while (!jugar.finjuego()) {
+            jugar.rondaV2();
+
+        }
+        System.out.println("-----------------------------------");
+        System.out.println("El juego ha terminado");
+
     }
-    
-    
 }
