@@ -9,7 +9,7 @@ public class Perro {
     private String nombre;
     private String raza;
     private int edad;
-    private String tamamo;
+    private String tamano;
 
     
     public Perro() {
@@ -19,7 +19,7 @@ public class Perro {
         this.nombre = nombre;
         this.raza = raza;
         this.edad = edad;
-        this.tamamo = tamamo;
+        this.tamano = tamamo;
         
     }
 
@@ -48,17 +48,17 @@ public class Perro {
     }
 
     public String getTamamo() {
-        return tamamo;
+        return tamano;
     }
 
     public void setTamamo(String tamamo) {
-        this.tamamo = tamamo;
+        this.tamano = tamamo;
     }
 
 
     @Override
     public String toString() {
-        return "Nombre= " + nombre + " -> Raza= " + raza + " -> Edad= " + edad + " -> Tamaño= " + tamamo + '}';
+        return "Nombre= " + nombre + " -> Raza= " + raza + " -> Edad= " + edad + " -> Tamaño= " + tamano + '}';
     }
 
     
