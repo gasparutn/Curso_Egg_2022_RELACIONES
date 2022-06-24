@@ -18,7 +18,7 @@ public class Jugador {
             this.turno = false;
             System.out.println("El " + nombre + " ha fallado");
         } else {
-            System.out.println("El " + nombre + " <MUERTO!> ");
+            System.out.println("El " + nombre + " <MOJADO!> ");
         }
     }
 
