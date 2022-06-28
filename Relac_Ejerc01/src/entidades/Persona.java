@@ -17,6 +17,14 @@ public class Persona {
     public Persona() {
     }
 
+    public Persona(String nombre, String apellido, int edad, int dni, Perro perro1) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.dni = dni;
+        this.perro1 = perro1;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -55,15 +63,6 @@ public class Persona {
 
     public void setPerro1(Perro perro1) {
         this.perro1 = perro1;
-    }
-
-    public Persona(String nombre, String apellido, int edad, long dni, Perro perro1, Perro perro2) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.dni = dni;
-        this.perro1 = perro1;
-
     }
 
     @Override

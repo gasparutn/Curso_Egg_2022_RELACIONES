@@ -3,15 +3,13 @@
  */
 package entidades;
 
-
 public class Perro {
-    
+
     private String nombre;
     private String raza;
     private int edad;
     private String tamano;
 
-    
     public Perro() {
     }
 
@@ -19,8 +17,8 @@ public class Perro {
         this.nombre = nombre;
         this.raza = raza;
         this.edad = edad;
-        this.tamano = tamamo;
-        
+        this.tamano = tamano;
+
     }
 
     public String getNombre() {
@@ -47,21 +45,17 @@ public class Perro {
         this.edad = edad;
     }
 
-    public String getTamamo() {
+    public String getTamano() {
         return tamano;
     }
 
-    public void setTamamo(String tamamo) {
-        this.tamano = tamamo;
+    public void setTamano(String tamano) {
+        this.tamano = tamano;
     }
-
 
     @Override
     public String toString() {
         return "Nombre= " + nombre + " -> Raza= " + raza + " -> Edad= " + edad + " -> Tamaño= " + tamano + '}';
     }
 
-    
-    
-            
 }

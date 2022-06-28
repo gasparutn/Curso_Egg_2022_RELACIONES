@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="entidades">
+  <ClassDiagramComponents>
+    <Class name="Baraja" package="entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="cartas" type="Carta" visibility="private"/>
+        <Field name="posSiguienteCarta" type="int" visibility="private"/>
+        <Field name="NUM_CARTAS" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="limite_carta_palo" type="int" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="crearBaraja" returnType="void" visibility="public"/>
+        <Method name="barajar" returnType="void" visibility="public"/>
+        <Method name="siguienteCarta" returnType="Carta" visibility="public"/>
+        <Method name="darCartas" returnType="Carta[]" visibility="public">
+          <Argument type="int" name="numCartas"/>
+        </Method>
+        <Method name="cartasDisponibles" returnType="int" visibility="public"/>
+        <Method name="cartasMonton" returnType="void" visibility="public"/>
+        <Method name="mostrarBaraja" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Carta" package="entidades" visibility="public" xPosition="676.0" yPosition="58.0">
+      <Fields>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="palo" type="String" visibility="private"/>
+        <Field name="PALOS" type="String[]" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="limite_carta_palo" type="int" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="numero"/>
+          <Argument type="String" name="palo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="entidades.Baraja" target="entidades.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cartas" source="entidades.Baraja" target="entidades.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
